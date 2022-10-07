@@ -1,4 +1,4 @@
-FROM openjdk
-COPY target/*.jar /
+FROM tomcat:8.0-alpine
+MAINTAINER "Bharath"
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/my-app-1.0-SNAPSHOT.jar"]
+CMD ["catalina.sh","run"]
